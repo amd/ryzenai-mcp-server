@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "amd-ryzenai": {
+      "command": "C:\\Users\\YourName\\miniforge3\\envs\\mcp_amd_ryzenai\\python.exe",
+      "args": ["C:\\path\\to\\MCP-Cursor\\MCP\\server.py"],
+      "cwd": "C:\\path\\to\\MCP-Cursor\\MCP",
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "GITHUB_TOKEN": "ghp_your_github_token_here"
+      }
+    }
+  }
+}
+

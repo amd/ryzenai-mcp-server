@@ -1,0 +1,14 @@
+{
+  "name": "AMD Ryzen AI",
+  "description": "Semantic search and access to AMD Ryzen AI documentation and code examples with enhanced embeddings.",
+  "transport": ["stdio"],
+  "icon": "./icon.svg",
+  "config": {
+    "command": "python",
+    "args": ["server.py"],
+    "env": {
+      "PYTHONUNBUFFERED": "1",
+      "GITHUB_TOKEN": ""
+    }
+  }
+}

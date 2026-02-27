@@ -1,0 +1,31 @@
+# Core MCP dependencies
+mcp>=1.14.0
+httpx>=0.28.0
+beautifulsoup4>=4.13.0
+
+# Machine Learning & AI
+torch>=1.12.0
+torchvision>=0.13.0
+onnx>=1.12.0
+onnxruntime>=1.12.0
+numpy>=1.21.0
+sentence-transformers>=2.2.0
+
+# Vector Database
+chromadb>=0.4.0
+
+# LangChain for text chunking
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-core>=0.1.0
+
+# Tree-sitter for AST-based code chunking
+tree-sitter>=0.20.0
+tree-sitter-languages>=1.10.0
+
+# Computer Vision (optional for image processing)
+opencv-python>=4.6.0
+
+# AMD Ryzen AI dependencies (optional)
+quark-toolkit>=0.9.0
+
