@@ -89,7 +89,7 @@ See `requirements.txt` for full dependency list. Key dependencies include:
 
 ## Documentation
 
-For detailed setup instructions, see `README_SETUP.md`.
+For detailed setup instructions, see the [Setup Guide](README_SETUP.md).
 
 ## Repository
 
