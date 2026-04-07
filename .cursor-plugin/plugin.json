@@ -1,0 +1,8 @@
+{
+  "name": "amd-ryzenai-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for AMD Ryzen AI documentation, RyzenAI-SW search, and semantic code retrieval.",
+  "homepage": "https://github.com/amd/ryzenai-mcp-server",
+  "repository": "https://github.com/amd/ryzenai-mcp-server",
+  "license": "MIT"
+}

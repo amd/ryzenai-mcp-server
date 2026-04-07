@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "amd-ryzenai": {
+      "command": "python",
+      "args": ["./server.py"],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "GITHUB_TOKEN": ""
+      }
+    }
+  }
+}
