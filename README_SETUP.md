@@ -34,7 +34,7 @@ If using Git:
 ```bash
 # Clone the repository
 git clone <repository_url>
-cd <repository_directory>/MCP-Cursor/MCP
+cd <repository_directory>
 ```
 
 If copying files manually:
