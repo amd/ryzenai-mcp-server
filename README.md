@@ -16,7 +16,7 @@ This MCP server provides semantic search and access to AMD Ryzen AI documentatio
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/amd/ryzenai-mcp-server
-   cd YOUR_REPO_NAME
+   cd ryzenai-mcp-server
    ```
 
 2. **Install dependencies:**
