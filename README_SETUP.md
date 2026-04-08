@@ -85,7 +85,7 @@ python test_list_tools.py
 **Expected Output:**
 ```
 ======================================================================
-[SUCCESS] Found 8 Available MCP Tools
+[SUCCESS] Found 9 Available MCP Tools
 ======================================================================
 
 1. read_ryzenai
@@ -97,28 +97,29 @@ python test_list_tools.py
 2. download_and_index_ryzenai_enhanced
    ...
 
-... (all 8 tools listed)
+... (all 9 tools listed)
 ```
 
-If you see all 8 tools listed with their descriptions, the installation is successful!
+If you see all 9 tools listed with their descriptions, the installation is successful!
 
 
 ## 🔧 Cursor IDE Integration
 
-### Step 1: Locate Cursor's Configuration
+### Step 1: Save `mcp.json` in the right place
 
-**Windows:**
-- Configuration file location: `%APPDATA%\Cursor\User\settings.json`
+Use a file named **`mcp.json`** at this path for your OS:
 
-**Linux:**
-- Configuration file location: `~/.config/Cursor/User/settings.json`
+| OS      | Path |
+|---------|------|
+| Windows | `%USERPROFILE%\.cursor\mcp.json` |
+| Linux   | `~/.cursor/mcp.json` |
+| macOS   | `~/.cursor/mcp.json` |
 
-**macOS:**
-- Configuration file location: `~/Library/Application Support/Cursor/User/settings.json`
+Create the `.cursor` folder if it does not exist.
 
-### Step 2: Configure MCP Server
+### Step 2: Add the server entry
 
-Open the Cursor configuration file and add the MCP server settings:
+Create or edit **`mcp.json`** with a top-level **`mcpServers`** object:
 
 ```json
 {
@@ -159,8 +160,8 @@ Open the Cursor configuration file and add the MCP server settings:
   "mcpServers": {
     "amd-ryzenai": {
       "command": "/home/yourname/anaconda3/envs/mcp_amd_ryzenai/bin/python",
-      "args": ["/path/to/MCP-Cursor/Mhereum/eth/CP/server.py"],
-      "cwd": "/path/to/MCP-Cursor/MCP",
+      "args": ["/path/to/ryzenai-mcp-server/server.py"],
+      "cwd": "/path/to/parent-of-server",
       "env": {
         "PYTHONUNBUFFERED": "1"
       }
@@ -179,7 +180,7 @@ For better search results without rate limits, you can add a GitHub token:
 4. Select scope: `public_repo`
 5. Generate and copy the token
 
-Then add it to the Cursor configuration:
+Add the token under `env` for `amd-ryzenai` in **`mcp.json`**:
 
 ```json
 {
@@ -199,9 +200,9 @@ Then add it to the Cursor configuration:
 
 ### Step 4: Restart Cursor IDE
 
-1. Close Cursor completely
-2. Reopen Cursor
-3. The MCP server should now be connected
+1. Quit Cursor completely (including from the system tray if it stays open)
+2. Open Cursor again
+3. In **Tools & MCP**, confirm **`amd-ryzenai`** is listed
 
 ## ✅ Verification
 
@@ -230,7 +231,7 @@ The MCP server provides the following tools:
 ### Issue: MCP server not starting
 
 **Solution:**
-- Check that Python path in Cursor config is correct
+- Check that the `command` (Python) path in **`mcp.json`** is correct
 - Ensure conda environment is activated when starting Cursor
 - Check Python version: `python --version` (should be 3.8+)
 
@@ -262,7 +263,7 @@ pip install chromadb --upgrade
 ### Issue: GitHub rate limit errors
 
 **Solution:**
-- Add GitHub token to Cursor configuration (see Step 3 above)
+- Add GitHub token to **`mcp.json`** (see Step 3 above)
 - Or wait for the rate limit to reset (typically 1 hour)
 
 ### Issue: Tree-sitter chunking not working
